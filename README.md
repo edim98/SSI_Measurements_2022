@@ -14,9 +14,29 @@ White Ambience Smart LED:
 
 | Time stamp   |      Description      | 
 |----------|-------------|
-| col 1 is |  left-aligned |
-| col 2 is |    centered   |
-| col 3 is | right-aligned |
+| 0.000000  |  started passive measurements |
+| 79981.515599 |    Shutting down the device   |
+| 80206.941670 | Butting up the device |
+|80288.619237 | Requesting light status from companion app (data) |
+|80317.742384 | Turning the light off |
+|80386.188985| Requesting light status from the companion app (wifi) |
+|80441.895108| Turning light on|
+|80504.872797| changing brightness all the way down in one go |
+|80561.092789| Changing the brightness all the way down in increments | 
+|806632.568819 | Changing the warmth all the way to white in one go |
+|80681.310976| Changing the warmth all the way to warm in increments | 
+|80696.160019| Opening the "scene" section of the companion app|
+|80700.700733| Reopening the "scene" section of the companion app|
+|80739.186312 | Choosing the night scene|
+|80799.111175| Choosing the reading scene |
+|80863.993509|Choosing the party scene|
+|80943.284334|Choosing the leisure scene|
+|81014.740455 | Setting up a timer to turn the light off|
+|81045.806175| Turning light off via timer|
+|81112.880398| Setting up a timer to turn the light on|
+|81165.921983|Turning the light on via timer|
+|81425.590748|Spamming the light on/off for 1 minute|
+|81827.021650| End of measurements|
 
 -------------
 ### Smart Power Plug
