@@ -38,6 +38,10 @@
                 "operator" : "eq",
                 "port" : 443
               },
+              "source-port" : {
+                "operator" : "eq",
+                "port" : 63636
+              },
               "ietf-mud:direction-initiated" : "from-device"
             }
           },
@@ -79,6 +83,10 @@
               "destination-port" : {
                 "operator" : "eq",
                 "port" : 8886
+              },
+              "source-port" : {
+                "operator" : "eq",
+                "port" : 40386
               },
               "ietf-mud:direction-initiated" : "from-device"
             }
@@ -122,7 +130,12 @@
               "source-port" : {
                 "operator" : "eq",
                 "port" : 8886
-              }
+              },
+              "destination-port" : {
+                "operator" : "eq",
+                "port" : 40386
+              },
+              "ietf-mud:direction-initiated" : "to-device"
             }
           },
           "actions" : {
@@ -139,7 +152,12 @@
               "source-port" : {
                 "operator" : "eq",
                 "port" : 443
-              }
+              },
+              "destination-port" : {
+                "operator" : "eq",
+                "port" : 63636
+              },
+              "ietf-mud:direction-initiated" : "to-device"
             }
           },
           "actions" : {

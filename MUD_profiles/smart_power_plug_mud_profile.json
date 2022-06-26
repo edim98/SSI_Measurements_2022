@@ -38,6 +38,10 @@
                 "operator" : "eq",
                 "port" : 443
               },
+              "source-port" : {
+                "operator" : "eq",
+                "port" : 59766
+              },
               "ietf-mud:direction-initiated" : "from-device"
             }
           },
@@ -68,6 +72,50 @@
           "actions" : {
             "forwarding" : "accept"
           }
+        }, {
+          "name" :"from-ipv4-smartpowerplug-2",
+          "matches" : {
+            "ipv4" : {
+              "protocol" : 6,
+              "destination-ipv4-network" : "3.120.92.134/32"
+            },
+            "tcp" : {
+              "source-port" : {
+                "operator" : "eq",
+                "port" : 40151
+              },
+              "destination-port" : {
+                "operator" : "eq",
+                "port" : 8886
+              },
+              "ietf-mud:direction-initiated": "from-device"
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        }, {
+          "name" :"from-ipv4-smartpowerplug-3",
+          "matches" : {
+            "ipv4" : {
+              "protocol" : 6,
+              "destination-ipv4-network" : "35.156.42.116/32"
+            },
+            "tcp" : {
+              "source-port" : {
+                "operator" : "eq",
+                "port" : 40572
+              },
+              "destination-port" : {
+                "operator" : "eq",
+                "port" : 8886
+              },
+              "ietf-mud:direction-initiated": "from-device"
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
         } ]
       }
     }, {
@@ -85,7 +133,12 @@
               "source-port" : {
                 "operator" : "eq",
                 "port" : 443
-              }
+              },
+              "destination-port" : {
+                "operator" : "eq",
+                "port" : 59766
+              },
+              "ietf-mud:direction-initiated": "to-device"
             }
           },
           "actions" : {
@@ -105,6 +158,50 @@
                 "operator" : "eq",
                 "port" : 67
               }
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        }, {
+          "name" : "to-ipv4-smartpowerplug-2",
+          "matches" : {
+            "ipv4" : {
+              "protocol" : 6,
+              "source-ipv4-network" : "3.120.92.134/32"
+            },
+            "tcp" : {
+              "source-port" : {
+                "operator" : "eq",
+                "port" : 8886
+              },
+              "destination-port" : {
+                "operator" : "eq",
+                "port" : 40151
+              },
+              "ietf-mud:direction-initiated": "to-device"
+            }
+          },
+          "actions" : {
+            "forwarding" : "accept"
+          }
+        }, {
+          "name" : "to-ipv4-smartpowerplug-3",
+          "matches" : {
+            "ipv4" : {
+              "protocol" : 6,
+              "source-ipv4-network" : "35.156.42.116/32"
+            },
+            "tcp" : {
+              "source-port" : {
+                "operator" : "eq",
+                "port" : 8886
+              },
+              "destination-port" : {
+                "operator" : "eq",
+                "port" : 40572
+              },
+              "ietf-mud:direction-initiated": "to-device"
             }
           },
           "actions" : {
