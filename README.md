@@ -1,6 +1,6 @@
 
 # SSI_Measurements_2022
-Active and passive measurements of two consumer IoT devices
+Active and passive measurements of two consumer IoT devices. Below the general info such as IPv4 and MAC address of both IoT devices and the respective gateways can be found along with the actions taken during the traffic capture. The time stamps associated with each actions are in seconds from the start of the capture (ctrl + alt + 4). 
 
 -------------
 ### White Ambience Smart LED
@@ -48,13 +48,13 @@ Smart Power Plug:
 - IPv4 - 192.168.8.190
 - MAC - 38:1f:8d:b0:c9:01
 
-# Passive measurements
+#### Passive measurements
 | Time stamp   |      Description      | 
 |----------|-------------|
 | 0.000000 | Start of passive measurements |
 | 38359.388236 | End of passive measurements |
 
-## Active measurements
+#### Active measurements
 
 | Time stamp   |      Description      | 
 |----------|-------------|
